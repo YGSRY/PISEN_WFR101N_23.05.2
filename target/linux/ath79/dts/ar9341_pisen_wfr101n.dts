@@ -131,21 +131,26 @@
 	};
 };
 
-&eth0 {
+&eth0 {		/* WAN interface, initialized last as eth1 */
 	status = "okay";
-	phy-handle = <&swphy4>;
+
 	nvmem-cells = <&macaddr_art_0>;
 	nvmem-cell-names = "mac-address";
-};
-
-&eth1 {
-	compatible = "syscon", "simple-mfd";
-	status = "okay";
+	mac-address-increment = <1>;
 
 	gmac-config {
 		device = <&gmac>;
-		switch-phy-swap = <0>;
+
+		switch-phy-addr-swap = <1>;
+		switch-phy-swap = <1>;
 	};
+};
+
+&eth1 {		/* LAN interface, initialized first as eth0 */
+	status = "okay";
+
+	nvmem-cells = <&macaddr_art_0>;
+	nvmem-cell-names = "mac-address";
 };
 
 &usb {
