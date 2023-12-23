@@ -128,6 +128,11 @@ ath79_setup_interfaces()
 	zyxel,nwa1123-ni)
 		ucidef_set_interface_lan "eth0"
 		;;
+		
+	pisen,wfr101n)
+		ucidef_set_interfaces_lan_wan "eth1" "eth0" 
+		;;
+		
 	airtight,c-75)
 		ucidef_add_switch "switch0" \
 			"0@eth0" "2:wan" "3:lan" "6@eth1"
