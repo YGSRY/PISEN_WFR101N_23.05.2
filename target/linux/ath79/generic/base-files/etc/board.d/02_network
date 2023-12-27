@@ -129,9 +129,6 @@ ath79_setup_interfaces()
 		ucidef_set_interface_lan "eth0"
 		;;
 		
-	pisen,wfr101n)
-		ucidef_set_interfaces_lan_wan "eth0" "eth1" 
-		;;
 		
 	airtight,c-75)
 		ucidef_add_switch "switch0" \
