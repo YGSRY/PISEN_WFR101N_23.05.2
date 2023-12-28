@@ -10,7 +10,7 @@
 name: OpenWrt-23.05.2
 
 on:
-  push:
+#  push:
     branches: 
       - main
   # schedule:
