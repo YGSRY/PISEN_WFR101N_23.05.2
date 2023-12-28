@@ -130,24 +130,23 @@
 	};
 };
 
-&mdio0 {
-	status = "okay";
-};
-
 &eth0 {
 	status = "okay";
 	phy-handle = <&swphy4>;
 	nvmem-cells = <&macaddr_art_0>;
 	nvmem-cell-names = "mac-address";
-	
 };
 
 &eth1 {
+	compatible = "syscon", "simple-mfd";
 	status = "okay";
-	phy-handle = <&swphy0>;
-	nvmem-cells = <&macaddr_art_6>;
+    nvmem-cells = <&macaddr_art_6>;
 	nvmem-cell-names = "mac-address";
 	
+	gmac-config {
+		device = <&gmac>;
+		switch-phy-swap = <0>;
+	};
 };
 
 &usb {
