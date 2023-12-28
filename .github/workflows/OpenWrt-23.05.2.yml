@@ -86,9 +86,9 @@ jobs:
           CONFIG_TARGET_ath79_generic=y
           CONFIG_TARGET_MULTI_PROFILE=y
 
-         # CONFIG_TARGET_DEVICE_ath79_generic_DEVICE_pisen_wfr101n=y
+          # CONFIG_TARGET_DEVICE_ath79_generic_DEVICE_pisen_wfr101n=y
           CONFIG_TARGET_ath79_generic_DEVICE_pisen_wfr101n=y
-         # CONFIG_TARGET_DEVICE_PACKAGES_ath79_generic_DEVICE_pisen_wfr101n=""
+          # CONFIG_TARGET_DEVICE_PACKAGES_ath79_generic_DEVICE_pisen_wfr101n=""
          
           CONFIG_ALL_KMODS=y
           CONFIG_ALL_NONSHARED=y
