@@ -130,22 +130,32 @@
 	};
 };
 
-&eth0 {
+&mdio0 {
 	status = "okay";
-	phy-handle = <&swphy4>;
+};
+
+&eth0 {
+    status = "okay";
+    compatible = "qca,ar9340-eth", "syscon", "simple-mfd";
+
 	nvmem-cells = <&macaddr_art_0>;
 	nvmem-cell-names = "mac-address";
+	
+	phy-mode = "gmii";
 };
 
 &eth1 {
-	compatible = "syscon", "simple-mfd";
-	status = "okay";
+    status = "okay";
+    compatible = "qca,ar9340-eth", "syscon", "simple-mfd";
+
     nvmem-cells = <&macaddr_art_6>;
 	nvmem-cell-names = "mac-address";
 	
-	gmac-config {
-		device = <&gmac>;
-		switch-phy-swap = <0>;
+	phy-mode = "mii";
+	
+	fixed-link {
+		speed = <1000>;
+		full-duplex;
 	};
 };
 
