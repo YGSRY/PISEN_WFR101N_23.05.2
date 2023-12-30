@@ -130,20 +130,21 @@
 	
 	nvmem-cells = <&macaddr_art_0>;
 	nvmem-cell-names = "mac-address";
+};
 
-    gmac-config {
+&eth1 {
+    status = "okay";
+    compatible = "syscon", "simple-mfd";
+    
+    nvmem-cells = <&macaddr_art_6>;
+	nvmem-cell-names = "mac-address";
+	
+	gmac-config {
     device = <&gmac>;
 
 	switch-phy-addr-swap = <1>;
 	switch-phy-swap = <1>;
 	};
-};
-
-&eth1 {
-    status = "okay";
-    nvmem-cells = <&macaddr_art_6>;
-	nvmem-cell-names = "mac-address";
-	
 };
 
 &usb {
