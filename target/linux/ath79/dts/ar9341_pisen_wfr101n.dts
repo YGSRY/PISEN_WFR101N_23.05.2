@@ -144,7 +144,7 @@
     status = "okay";
     compatible = "syscon", "simple-mfd";
     
-    nvmem-cells = <&macaddr_art_6>;
+    nvmem-cells = <&macaddr_art_0>;
 	nvmem-cell-names = "mac-address";
 	
 };
@@ -170,5 +170,4 @@
 		macaddr_art_0: macaddr@0 {
 		reg = <0x0 0x6>;
 	};
-
 };
