@@ -130,6 +130,14 @@
 	
 	nvmem-cells = <&macaddr_art_0>;
 	nvmem-cell-names = "mac-address";
+	mac-address-increment = <(-1)>;
+	
+	gmac-config {
+		device = <&gmac>;
+
+		switch-phy-addr-swap = <0>;
+		switch-phy-swap = <0>;
+	};
 };
 
 &eth1 {
@@ -138,6 +146,7 @@
     
     nvmem-cells = <&macaddr_art_6>;
 	nvmem-cell-names = "mac-address";
+	
 };
 
 &usb {
@@ -162,7 +171,4 @@
 		reg = <0x0 0x6>;
 	};
 
-	    macaddr_art_6: macaddr@6 {
-		reg = <0x6 0x6>;
-	};
 };
