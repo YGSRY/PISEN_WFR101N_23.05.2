@@ -126,6 +126,8 @@
 
 &eth0 {
 	status = "okay";
+	phy-handle = <&swphy0>;
+	
 	compatible = "syscon", "simple-mfd";
 	
 	nvmem-cells = <&macaddr_art_0>;
@@ -136,6 +138,8 @@
 
 &eth1 {
     status = "okay";
+    phy-handle = <&swphy4>;
+    
     compatible = "syscon", "simple-mfd";
     
     nvmem-cells = <&macaddr_art_0>;
