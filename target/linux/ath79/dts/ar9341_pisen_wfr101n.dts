@@ -135,6 +135,12 @@
 	nvmem-cell-names = "mac-address";
 	mac-address-increment = <(-1)>;
 	
+	gmac-config {
+		device = <&gmac>;
+
+		switch-phy-addr-swap = <1>;
+		switch-phy-swap = <1>;
+	};
 };
 
 &eth1 {
