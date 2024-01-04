@@ -11,10 +11,6 @@
 	compatible = "pisen,wfr101n", "qca,ar9341";
 
 	aliases {
-	    led-boot = &led_power_blue;
-		led-failsafe = &led_power_blue;
-		led-running = &led_power_blue;
-		led-upgrade = &led_power_blue;
 	    label-mac-device = &wmac;
 		
 	};
@@ -142,11 +138,6 @@
     nvmem-cells = <&macaddr_art_0>;
 	nvmem-cell-names = "mac-address";
 	mac-address-increment = <1>;
-	
-	gmac-config {
-		device = <&gmac>;
-		switch-phy-swap = <0>;
-	};
 };
 
 &usb {
