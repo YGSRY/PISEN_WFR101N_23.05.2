@@ -125,14 +125,14 @@
 };
 
 &eth0 {
-    compatible = "syscon", "simple-mfd";
+    
 	status = "okay";
 	nvmem-cells = <&macaddr_art_0>;
 	nvmem-cell-names = "mac-address";
 };
 
 &eth1 {
-	compatible = "syscon", "simple-mfd";
+	
 	status = "okay";
 
     nvmem-cells = <&macaddr_art_0>;
